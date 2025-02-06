@@ -1,10 +1,13 @@
+import Box from "./components/Box"
+import SideBar from "./components/SideBar"
 import TopBar from "./components/TopBar"
 const App = () => {
   return (
-    <div>
+    <>
      <TopBar/>
-     
-    </div>
+     <SideBar/>
+     <Box divname="meow" />
+    </>
   )
 }
 
