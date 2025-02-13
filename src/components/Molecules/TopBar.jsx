@@ -10,7 +10,7 @@ const TopBar = ({ notifs, name, title, profpic }) => {
       {/* Notification Bell Container */}
       <div className="bg-amber-900 w-[3rem] relative flex items-center justify-center">
         <img className="w-[1.8rem]" src={notifbell} alt="" />
-        <div className="bg-green-600 w-[0.5rem] h-[1rem] rounded-full absolute top-0 right-0 z-10 flex items-center justify-center text-xs text-white">
+        <div className="bg-green-600 w-[0.6rem] h-[0.7rem] rounded-full absolute top-5 right-4 z-10 flex items-center justify-center text-xs text-white">
           {notifs}
         </div>
       </div>
