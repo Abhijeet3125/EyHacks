@@ -2,7 +2,7 @@ import notifbell from "/public/notifbell.svg";
 
 const TopBar = ({ notifs, name, title, profpic }) => {
   return (
-    <div className="bg-red-500 max-w-screen h-[4rem] flex gap-[1rem] z-10 ml-[0.1rem]">
+    <div className="bg-red-500 max-w-screen h-[4rem] flex gap-[1rem] z-10 ml-[6.1rem]">
       <div className="flex items-center text-gray-600 bg-amber-400 text-sm font-bold h-[4rem] w-[95rem] pl-[0.5rem] ml-[0rem] ">
         @ SAKSHAM-AI
       </div>
