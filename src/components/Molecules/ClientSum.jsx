@@ -1,14 +1,14 @@
-import Texticon from "../Atoms/Texticon"
+import Texticon from "../Atoms/Texticon";
 
 const ClientSum = () => {
   return (
-    <div className="bg-red-700 w-[99.7%] mt-[0.2rem] ml-[0.1rem] rounded-xl h-[20rem]">
-        <Texticon/>
-        <div>
-          
-        </div>
+    <div className="flex justify-start items-center w-[99.7%] h-[20rem]">
+      <div className="flex flex-col justify-center items-center bg-white rounded-2xl w-full h-full m-20">
+        <Texticon />
+        <div className="w-[97%] h-full m-[1rem] rounded-2xl bg-blue-100"></div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ClientSum
+export default ClientSum;

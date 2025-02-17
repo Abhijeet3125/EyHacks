@@ -3,17 +3,20 @@ import ClientSum from "./components/Molecules/ClientSum";
 import Middlefile from "./components/Molecules/Middlefile";
 import SideBar from "./components/Molecules/SideBar";
 import TopBar from "./components/Molecules/TopBar";
+import Navbar from "./components/Navbar";
+import AgentHome from "./pages/AgentHome";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import StatusPage from "./pages/StatusPage";
 
 const App = () => {
   return (
-    <div className="flex flex-col">
-      <SideBar />
-      <TopBar />
-      <div className="flex-1 ml-[6rem] max-w-screen overflow-hidden">
-        <Boxlayer />
-        <Middlefile/>
-        <ClientSum/>
-      </div>
+    <div>
+      {/* <Navbar /> */}
+      <AgentHome />
+      {/* <HomePage/>
+      <LoginPage/>
+      <StatusPage /> */}
     </div>
   );
 };
