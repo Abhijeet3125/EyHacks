@@ -16,9 +16,12 @@ const Middlefile = () => {
     setResponseData("");
 
     try {
-      const response = await axios.post("http://localhost:5000/process_conversation", {
-        conversation_text: inputText,  // Send user input to backend
-      });
+      const response = await axios.post(
+        "http://localhost:5000/process_conversation",
+        {
+          conversation_text: inputText, // Send user input to backend
+        }
+      );
 
       setResponseData(response.data.response); // Store API response
     } catch (err) {
@@ -31,34 +34,29 @@ const Middlefile = () => {
 
   return (
     <div className="p-4 rounded-xl w-[99.8%] gap-[0.8rem] h-[30rem] flex">
-      <div className="bg-white w-[63%] rounded-xl h-[98%] ml-[0.2rem] mt-[0.3rem] flex-row gap-[2rem]">
-      <Texticon data="Real Time Suggestions" />
-        
-        {/* Input and Button */}
-        <div className="ml-[1.2rem] flex flex-col items-center justify-center w-[96.5%] h-[84%]">
-          {/* <input
-            type="text"
-            value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
-            className="p-2 border rounded w-full"
-            placeholder="Enter conversation text..."
-          /> */}
-          <button 
+      <div className="bg-white w-[63%] rounded-xl h-[98%] ml-1 mt-1 p-4">
+        <div className="flex justify-between items-center mb-4">
+          <Texticon data="Real Time Suggestions" />
+          <button
             onClick={fetchData}
-            className="mt-2 p-2 bg-blue-500 text-white rounded"
+            className="px-4 py-2 bg-blue-500 text-white rounded-lg transition-all duration-200 hover:bg-blue-600 disabled:opacity-50 w-25"
             disabled={loading}
           >
             {loading ? "Processing..." : "Ask AI"}
           </button>
+        </div>
 
-          {/* Display API response */}
-          <div className="p-[1rem] rounded-xl bg-orange-50 w-full h-full overflow-auto mt-4">
-            {error && <p className="text-red-500">{error}</p>}
-            {!error && responseData && <p>{responseData}</p>}
-          </div>
+        {/* Display API response */}
+        <div className="p-4 rounded-lg bg-orange-50 w-full h-[80%] overflow-auto font-sans text-lg font-semibold">
+          {error && (
+            <p className="text-gray-600 typing-text font-mdsans">{error}</p>
+          )}
+          {!error && responseData && (
+            <p className="typing text text-gray-800">{responseData}</p>
+          )}
         </div>
       </div>
-        
+
       <PopCat />
     </div>
   );
