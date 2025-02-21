@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import agentAuthRoutes from "./routes/agentAuth.routes.js";
+import { connectDB } from "./lib/db.js";
 
 dotenv.config();
 
@@ -14,6 +16,8 @@ app.use(cors({
     credentials: true
 }));
 
+app.use("/api/auth", agentAuthRoutes);
+
 app.get('/', (req, res) => {
     res.send("backend is running");
 
@@ -21,4 +25,5 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`server is running of port ${PORT}`);
+    connectDB();
 });
