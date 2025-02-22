@@ -13,13 +13,13 @@ const AgentLogin = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen font-dmsans">
-      <div className="text-3xl font-bold mb-[1.5rem] flex flex-col">
-        Welcome
-      </div>
       {/* <div className="mb-[1rem]">
         Enter your agent ID and password to create login.
       </div> */}
-      <div className="bg-base-300 rounded-3xl h-[25rem] w-[30rem] flex flex-col backdrop-blur-lg shadow-lg">
+      <div className="bg-[rgba(0,0,0,0.7)] rounded-3xl h-[30rem] w-[30rem] flex flex-col shadow-xl items-center">
+        <div className="text-3xl font-bold pt-[2rem] flex flex-col ">
+          Welcome
+        </div>
         <form
           onSubmit={hanldeSubmit}
           className="space-y-6 w-[90%] p-[2rem] m-auto mb-0 mt-0"
@@ -29,7 +29,7 @@ const AgentLogin = () => {
             <input
               type="text"
               placeholder="Agent ID"
-              className="h-13 rounded-md  bg-base-100 border-none pl-2"
+              className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] pl-2 border-none"
             />
           </label>
           <label className="flex flex-col gap-2">
@@ -37,11 +37,11 @@ const AgentLogin = () => {
             <input
               type="text"
               placeholder="••••••"
-              className="h-13 rounded-md bg-base-100 border-none pl-2"
+              className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] pl-2 border-none"
             />
           </label>
           <button type="submit" className="btn btn-primary w-full mt-4">
-            Sign Up
+            Sign In
           </button>
         </form>
         <div className="text-center">

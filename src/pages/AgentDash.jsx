@@ -7,11 +7,12 @@ const AgentDash = () => {
   return (
     <div className="w-full flex ">
       {/* box layer */}
-      <div className="flex flex-col w-[60%]">
+      <div className="flex flex-col w-[61%]">
         <div className="h-[25%] mt-[7rem] w-50% flex gap-5 pl-[9%] text-white">
           <div className="w-[23%] h-[12rem] bg-base-300 rounded-2xl opacity-70 flex flex-col">
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-xl pt-[10%]">
               Active Claims
+              
             </div>
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-xl pt-[10%]">
               {" "}

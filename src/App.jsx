@@ -7,6 +7,7 @@ import AgentSignup from "./pages/AgentSignup";
 import AgentLogin from "./pages/AgentLogin";
 import AgentDash from "./pages/AgentDash";
 import Sidebar from "./components/Sidebar";
+import RealTsuggestion from "./pages/RealTsuggestion";
 
 const App = () => {
   return (
@@ -14,16 +15,16 @@ const App = () => {
       <Navbar />
       <Sidebar />
       <div className="w-full h-screen">
-        <AgentDash />
+        {/* <AgentDash /> */}
         {/* <AgentSignup /> */}
+        {/* <AgentLogin /> */}
+        <RealTsuggestion />
       </div>
 
       {/* <AgentHome /> */}
       {/* <HomePage/>
         <LoginPage/>
         <StatusPage /> */}
-      
-      {/* <AgentLogin /> */}
     </div>
   );
 };
