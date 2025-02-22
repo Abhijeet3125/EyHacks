@@ -1,7 +1,23 @@
+@font-face {
+  font-family: Orbitron;
+  src: url("../src/assets/fonts/Orbitron-Regular.ttf");
+}
+
+@font-face {
+  font-family: DMsans;
+  src: url("../src/assets/fonts/DMSans_36pt-Regular.ttf");
+}
+
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@theme {
+  --font-orbitron: Orbitron , "sans-serif";
+}
+@theme {
+  --font-dmsans: DMsans, "sans-serif"
+}
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark , business , abyss , dim;
+  themes: light --default, dark --prefersdark , business , abyss , dim , night ,lemonade, nord, cupcake, coffee, autumn , dracula , emerald , sunset , forest;
 }
 
 /* Typing effect */
@@ -32,7 +48,3 @@
   border-right: 4px solid white; /* Cursor effect */
   animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
 }
-
-.font-mdsans {
-    font-family: 'MD Sans', sans-serif;
-  }

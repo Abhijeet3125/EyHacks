@@ -5,19 +5,25 @@ import LoginPage from "./pages/LoginPage";
 import StatusPage from "./pages/StatusPage";
 import AgentSignup from "./pages/AgentSignup";
 import AgentLogin from "./pages/AgentLogin";
+import AgentDash from "./pages/AgentDash";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-[url('/backimg4.jpg')] bg-cover">
       <Navbar />
-      <div className="flex justify-center items-center h-screen">
-        {/* <AgentHome /> */}
-        {/* <HomePage/>
-      <LoginPage/>
-      <StatusPage /> */}
+      <Sidebar />
+      <div className="w-full h-screen">
+        <AgentDash />
         {/* <AgentSignup /> */}
-        <AgentLogin />
       </div>
+
+      {/* <AgentHome /> */}
+      {/* <HomePage/>
+        <LoginPage/>
+        <StatusPage /> */}
+      
+      {/* <AgentLogin /> */}
     </div>
   );
 };

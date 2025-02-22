@@ -13,24 +13,24 @@ const AgentSignup = () => {
   const hanldeSubmit = () => {};
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen font-mdsans">
-      <div className="text-3xl font-bold mb-[1.5rem] flex flex-col">
-        Create Account
-      </div>
+    <div className="flex flex-col justify-center items-center h-screen font-dmsans">
       {/* <div className="mb-[1rem]">
         Enter your agent details to create account.
       </div> */}
-      <div className="bg-base-300 rounded-3xl h-[33rem] w-[30rem] flex flex-col backdrop-blur-lg shadow-lg">
+      <div className="bg-[rgba(0,0,0,0.7)] rounded-3xl h-[35rem] w-[30rem] flex flex-col shadow-xl items-center">
+        <div className="text-3xl font-bold pt-[2rem] flex flex-col ">
+          Create Account
+        </div>
         <form
           onSubmit={hanldeSubmit}
-          className="space-y-6 w-[90%] p-[2rem] m-auto mb-0 mt-0"
+          className="space-y-6 w-[90%] p-[2rem] pt-[0.5rem] m-auto mb-0 mt-0"
         >
           <label className="flex flex-col gap-2 pt-[1rem]">
             Full Name
             <input
               type="text"
               placeholder="Full Name"
-              className="h-13 rounded-md bg-base-100 pl-2 border-none"
+              className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] pl-2 border-none"
             />
           </label>
           <label className="flex flex-col gap-2 ">
@@ -38,7 +38,7 @@ const AgentSignup = () => {
             <input
               type="text"
               placeholder="Agent ID"
-              className="h-13 rounded-md  bg-base-100 border-none pl-2"
+              className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] border-none pl-2"
             />
           </label>
           <label className="flex flex-col gap-2">
@@ -46,7 +46,7 @@ const AgentSignup = () => {
             <input
               type="text"
               placeholder="••••••"
-              className="h-13 rounded-md bg-base-100 border-none pl-2"
+              className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] border-none pl-2"
             />
           </label>
           <button type="submit" className="btn btn-primary w-full mt-4">

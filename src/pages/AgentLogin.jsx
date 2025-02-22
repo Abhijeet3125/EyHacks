@@ -12,7 +12,7 @@ const AgentLogin = () => {
   const hanldeSubmit = () => {};
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen font-mdsans">
+    <div className="flex flex-col justify-center items-center h-screen font-dmsans">
       <div className="text-3xl font-bold mb-[1.5rem] flex flex-col">
         Welcome
       </div>
