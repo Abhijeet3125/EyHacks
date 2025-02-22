@@ -1,0 +1,27 @@
+common_issues: If a financial claim is denied, you can request a detailed reason from the insurer and reapply with additional evidence.
+common_issues: For fraudulent financial claims, submit a police report along with your claim documents.
+common_issues: Claims may be partially settled if the insurer determines that only part of the loss is covered.
+documents_required: To file a financial claim, you need the following documents: proof of loss, policy document, ID proof, and a filled claim form.
+documents_required: Some financial claims, such as accidental death benefits, require notarized affidavits along with medical and police reports.
+documents_required: For property-related claims, an assessment report from a surveyor may be needed.
+information_to_ask_from_the_customer: Policy number and claimant’s details.
+information_to_ask_from_the_customer: Nature of the financial loss (e.g., accident, theft, damage).
+information_to_ask_from_the_customer: Date and location of the incident.
+information_to_ask_from_the_customer: Whether a police report has been filed (if applicable).
+information_to_ask_from_the_customer: Bank details for claim settlement.
+information_to_ask_from_the_customer: Supporting documents such as bills, receipts, or assessment reports.
+processing_time: The processing time for financial claims is usually 7-10 business days.
+processing_time: Missing or incorrect bank details can lead to delays in financial claim settlements.
+processing_time: Fraud investigations may extend the claim processing time.
+special_cases: Financial claim settlements may involve direct payments to the claimant or third-party reimbursements.
+special_cases: Partial settlements can occur in financial claims if only part of the loss is covered under the policy.
+special_cases: Claims related to high-value items may require additional verification.
+steps_to_process_a_claim: Notify the insurer about the loss or event as soon as possible.
+steps_to_process_a_claim: Gather the necessary documents, including proof of loss and policy details.
+steps_to_process_a_claim: File a police report if required (e.g., for theft or fraud claims).
+steps_to_process_a_claim: Submit the claim form along with supporting documents to the insurer.
+steps_to_process_a_claim: The insurer may conduct an investigation or survey before approving the claim.
+steps_to_process_a_claim: Once verified, the claim amount is processed and transferred to the claimant.
+when_can_you_file_a_claim: Financial claims can be filed in case of accidental damage, theft, or loss of insured assets.
+when_can_you_file_a_claim: You can file a financial claim for events covered under the policy, such as natural disasters, fire, or burglary.
+when_can_you_file_a_claim: Life insurance claims can be filed in the event of the insured person's death, subject to policy terms.

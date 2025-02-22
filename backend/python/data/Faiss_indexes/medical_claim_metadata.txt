@@ -1,0 +1,26 @@
+ processing_time: The processing time for medical claims is usually 5-7 business days.
+ processing_time: Emergency medical claims should be reported to the insurer within 24 hours of hospitalization.
+ processing_time: Reimbursement claims may take longer as they require verification of submitted documents.
+common_issues: Common reasons for medical claim denials include missing documents, policy exclusions, and expired policies.
+common_issues: Medical claim rejections can sometimes be reversed if additional supporting documents are provided.
+common_issues: Pre-existing conditions might not be covered if they fall under the policy’s waiting period.
+documents_required: To file a medical insurance claim, you need the following documents: medical bills, policy document, ID proof, and a filled claim form.
+documents_required: Medical claim reimbursement usually requires submission of original bills and discharge summaries.
+documents_required: In case of an accident-related claim, you may need an FIR copy and a doctor's report.
+information_to_ask_from_the_customer: Policy number and details of the insured person.
+information_to_ask_from_the_customer: Type of treatment received (planned or emergency).
+information_to_ask_from_the_customer: Hospital details (network or non-network).
+information_to_ask_from_the_customer: Date of admission and expected discharge date.
+information_to_ask_from_the_customer: Medical bills and reports related to the treatment.
+information_to_ask_from_the_customer: Whether they have informed the insurer about the claim.
+special_cases: Medical claims for pre-existing conditions may be subject to waiting periods before approval.
+special_cases: Cashless medical claims must be approved by the insurer before treatment begins, except in emergencies.
+special_cases: For critical illness claims, additional medical tests may be required for verification.
+steps_to_process_a_claim: Notify the insurance company about the hospitalization or treatment as per the policy guidelines.
+steps_to_process_a_claim: Submit the necessary documents, including medical reports, bills, and claim forms.
+steps_to_process_a_claim: If applying for a cashless claim, get the insurer’s approval before the treatment starts.
+steps_to_process_a_claim: For reimbursement claims, ensure that all bills and reports are in original format before submission.
+steps_to_process_a_claim: Once documents are verified, the insurer will process the claim and transfer the approved amount.
+when_can_you_file_a_claim: You can file a medical insurance claim in case of hospitalization due to illness, accident, or surgery.
+when_can_you_file_a_claim: Medical claims can be filed for cashless treatment at network hospitals or for reimbursement of medical expenses incurred at non-network hospitals.
+when_can_you_file_a_claim: You may also file a claim for pre- and post-hospitalization expenses if covered under your policy.
