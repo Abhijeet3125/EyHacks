@@ -8,6 +8,7 @@ import AgentLogin from "./pages/AgentLogin";
 import AgentDash from "./pages/AgentDash";
 import Sidebar from "./components/Sidebar";
 import RealTsuggestion from "./pages/RealTsuggestion";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       {/* <HomePage/>
         <LoginPage/>
         <StatusPage /> */}
+      <Toaster />
     </div>
   );
 };

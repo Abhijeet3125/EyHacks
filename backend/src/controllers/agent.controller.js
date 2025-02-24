@@ -3,28 +3,27 @@ import { generateToken } from "../lib/utils.js";
 import bcrypt from "bcryptjs";
 import Agent from "../models/agent.model.js";
 
-export const signup = async (req , res) => {
+export const signup = async (req, res) => {
     const { fullName, email, password } = req.body;
     try {
-
         if (!fullName || !email || !password) {
-            return res.status(400).json({ message: "All  fields are required" });
+            return res.status(400).json({ message: "All fields are required" });
         }
         if (password.length < 6) {
             return res.status(400).json({ message: "Password must be at least 6 characters" });
         }
 
-        const agent = await agent.findOne({ email });
-        if (agent) {
-            return res.status(400).json({ message: "agent already exists" });
+        const existingAgent = await Agent.findOne({ email }); // <-- Change variable name here
+        if (existingAgent) {
+            return res.status(400).json({ message: "Agent already exists" });
         }
 
         const salt = await bcrypt.genSalt(10);
         const hashedpass = await bcrypt.hash(password, salt);
 
-        const newAgent = new agent({
-            fullName: fullName,
-            email: email,
+        const newAgent = new Agent({ 
+            fullName,
+            email,
             password: hashedpass
         });
 
@@ -74,5 +73,26 @@ export const login = async (req, res) => {
     } catch (error) {
         console.log("error in login controller", error.message);
         return res.status(500).json({ message: "internal server error" });
+    }
+};
+
+export const logout = (req, res) => {
+    try {
+        res.cookie("jwt", "", { maxAge: 0 });
+        return res.status(200).json({ message: "logged out successfully" });
+
+    } catch (error) {
+        console.log("error in logout controller", error.message);
+        return res.status(500).json({ message: "internal server error" });
+    }
+};
+
+export const checkAuth = (req, res) => {
+    try {
+        res.status(200).json(req.agent);
+
+    } catch (error) {
+        console.log("error in checkAuth controller", error.message);
+        res.status(500).json({ message: "Internal server error" });
     }
 };

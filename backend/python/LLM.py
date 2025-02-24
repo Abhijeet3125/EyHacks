@@ -1,8 +1,10 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from flask_socketio import SocketIO
 import os
-from typing import Any, List, Dict
+from typing import List, Dict
 import faiss
 import numpy as np
-from flask_cors import CORS
 from sentence_transformers import SentenceTransformer
 from transformers import pipeline
 from langchain_core.prompts import ChatPromptTemplate
@@ -11,17 +13,22 @@ from dotenv import load_dotenv
 
 model = SentenceTransformer('all-mpnet-base-v2')
 
-index_dir = os.path.join("python", "data", "Faiss_indexes")
-data_dir = os.path.join("python", "data", "Faiss_db")
+index_dir = os.path.join("data", "Faiss_indexes")
+data_dir = os.path.join("data", "Faiss_db")
 os.makedirs(index_dir, exist_ok=True)
 
 load_dotenv()
 api_key = os.getenv("API_KEY")
-chat = ChatGroq(temperature=0, model_name="mixtral-8x7b-32768",
+chat = ChatGroq(temperature=0, model_name="gemma2-9b-it",
                 groq_api_key=api_key)
 
 classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 
+app = Flask(__name__)
+CORS(app)
+socketio = SocketIO(app, cors_allowed_origins="*")
+
+conversation_history = []
 
 def load_data_from_txt(data_dir):
     documents = {}
@@ -36,7 +43,6 @@ def load_data_from_txt(data_dir):
                         content = file.readlines()
                     documents[category][heading] = [line.strip() for line in content]
     return documents
-
 
 def build_or_load_index(category, text):
     index_file = os.path.join(index_dir, f"{category.lower().replace(' ', '_')}_index.index")
@@ -57,7 +63,6 @@ def build_or_load_index(category, text):
             file.write("\n".join(text))
 
     return index, text
-
 
 indexes = {}
 category_text = {}
@@ -86,15 +91,11 @@ else:
             category_text[category] = text
             category_list.append(category)
 
-
 def predict_category(query):
     result = classifier(query, candidate_labels=category_list)
     return result["labels"][0]
 
-
 def summarize_conversation(conversation_history: List[Dict[str, str]]) -> str:
-    """Summarize the conversation history into a concise summary."""
-
     formatted_conversation = "\n".join([f"{msg['role']}: {msg['content']}" for msg in conversation_history])
 
     prompt = ChatPromptTemplate.from_messages([
@@ -111,30 +112,24 @@ def summarize_conversation(conversation_history: List[Dict[str, str]]) -> str:
         summary += chunk.content
     return summary.strip()
 
-
 def generate_query_from_conversation(conversation_summary: str):
-    """Generate a query based on the conversation summary using Groq LLM."""
-
     prompt = ChatPromptTemplate.from_messages([
         ("human", f"""
         Use this conversation summary to form a query that I will pipe into my vector database,
         so that it can be directly extracted from my vector database trained on the Claims database,
         which is trained only on problems and solutions or FAQs. Generate only one question framed like an FAQ.
-        Also generate the query such that it ask the latest doubt of the customer but have the context of previous summary.
+        Also generate the query such that it asks the latest doubt of the customer but has the context of the previous summary.
         Conversation Summary:
         {conversation_summary}
         """)
     ])
     chain = prompt | chat
     response = ""
-    for chunk in chain.stream({"conversation": conversation_summary}):
+    for chunk in chain.stream({"conversation_summary": conversation_summary}):
         response += chunk.content
     return response.strip()
 
-
 def retrieve_information(query):
-    """Retrieve relevant information from the vector database."""
-
     category = predict_category(query)
     index = indexes[category]
     query_embeddings = model.encode([query])
@@ -142,15 +137,12 @@ def retrieve_information(query):
     results = [category_text[category][i] for i in indices[0]]
     return results
 
-
 def format_output_for_agent(results: List[str], query: str) -> str:
-    """Format the retrieved information into a readable response for the agent."""
-
     formatted_results = "\n".join([f"- {result}" for result in results])
     prompt = ChatPromptTemplate.from_messages([
         ("human", f"""
         The following information was retrieved from the vector database in response to the query: "{query}".
-        Format this information into a clear and concise response for the agent. (Don't use * in output for making it bold)
+        Format this information into a clear and concise response for the agent. Format the tips as a numbered list and do not add any symbols or asterisks"
         Retrieved Information:
         {formatted_results}
         Formatted Response:
@@ -162,55 +154,18 @@ def format_output_for_agent(results: List[str], query: str) -> str:
         response += chunk.content
     return response.strip()
 
-
-conversation_history = []
-# for testing the model
-# while True:
-#     user_input = input("Conversation: ")
-#     if user_input.lower() == "exit":
-#         break
-#
-#     conversation_history.append({"role": "User", "content": user_input})
-#
-#     conversation_summary = summarize_conversation(conversation_history)
-#     # print(f"\nConversation Summary: {conversation_summary}")
-#
-#     query = generate_query_from_conversation(conversation_summary)
-#     # print(f"Generated Query: {query}")
-#
-#     results = retrieve_information(query)
-#     # print(f"results from database: {results}")
-#
-#     formatted_response = format_output_for_agent(results, query)
-#     print("\nFormatted Response for Agent:")
-#     print(formatted_response)
-
-
-from flask import Flask, request, jsonify
-import threading
-
-app = Flask(__name__)
-CORS(app)
-
-
 def process_conversation(conversation_text):
     global conversation_history
     conversation_history.append({"role": "User", "content": conversation_text})
 
-    # Step 1: Summarize conversation
     conversation_summary = summarize_conversation(conversation_history)
-
-    # Step 2: Generate query for FAQ retrieval
     query = generate_query_from_conversation(conversation_summary)
-
-    # Step 3: Retrieve relevant information from vector database
     results = retrieve_information(query)
-
-    # Step 4: Format response for agent
     formatted_response = format_output_for_agent(results, query)
 
-    return formatted_response
+    socketio.emit('new_suggestion', {'response': formatted_response})
 
+    return formatted_response
 
 @app.route('/process_conversation', methods=['POST'])
 def receive_transcription():
@@ -220,10 +175,7 @@ def receive_transcription():
 
     conversation_text = data['conversation_text']
     response = process_conversation(conversation_text)
-    print(response)
     return jsonify({"response": response})
 
-
 if __name__ == '__main__':
-    # Run Flask server on 0.0.0.0 to listen on all interfaces
-    app.run(host='0.0.0.0', port=5000, threaded=True)
+    socketio.run(app, host='0.0.0.0', port=5000, debug=True)
