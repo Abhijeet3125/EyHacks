@@ -1,4 +1,6 @@
 import Navbar from './components/Navbar';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
 import AgentHome from './pages/AgentHome';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -8,23 +10,49 @@ import AgentLogin from './pages/AgentLogin';
 import AgentDash from './pages/AgentDash';
 import Sidebar from './components/Sidebar';
 import RealTsuggestion from './pages/RealTsuggestion';
+import { Toaster } from 'react-hot-toast';
+import { useAuthStore } from './store/useAuthStore.js';
+import { useEffect } from 'react';
 
 const App = () => {
+  const { authAgent, checkAuth, isCheckingAuth } = useAuthStore();
+
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
+
   return (
-    <div className="bg-[url('/backimg4.jpg')] bg-cover">
+    <div className="bg-[url('/backimg5.jpg')]">
       <Navbar />
-      <Sidebar />
+      {authAgent && <Sidebar />}
       <div className="w-full h-screen">
+        {/* <Routes>
+          <Route
+            path="/"
+            element={authAgent ? <AgentDash /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/login"
+            element={!authAgent ? <AgentLogin /> : <Navigate to="/" />}
+          />
+
+          <Route
+            path="/signup"
+            element={!authAgent ? <AgentSignup /> : <Navigate to="/" />}
+          />
+          <Route
+            path="/realTs"
+            element={authAgent ? <RealTsuggestion /> : <Navigate to="/login" />}
+          />
+          <Route path="/home" element={<Navigate to="/" />} />
+        </Routes> */}
         <AgentDash />
-        {/* <AgentSignup /> */}
-        {/* <AgentLogin /> */}
-        {/* <RealTsuggestion /> */}
       </div>
 
-      {/* <AgentHome /> */}
       {/* <HomePage/>
         <LoginPage/>
         <StatusPage /> */}
+      <Toaster />
     </div>
   );
 };
