@@ -11,13 +11,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-orbitron: Orbitron , "sans-serif";
+  --font-orbitron: Orbitron, "sans-serif";
+  --font-dmsans: DMsans, "sans-serif";
 }
-@theme {
-  --font-dmsans: DMsans, "sans-serif"
-}
+
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark , business , abyss , dim , night ,lemonade, nord, cupcake, coffee, autumn , dracula , emerald , sunset , forest;
+  themes: light --default, dark --prefersdark, business, abyss, dim, night, lemonade, nord, cupcake, coffee, autumn, dracula, emerald, sunset, forest;
 }
 
 /* Typing effect */
@@ -47,4 +46,162 @@
   overflow: hidden;
   border-right: 4px solid white; /* Cursor effect */
   animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+}
+
+/* Loader Animation */
+#loader-wrapper {
+  position: relative;
+  width: 300px; /* Increased from 200px */
+  height: 300px; /* Increased from 200px */
+  margin: 0 auto;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid transparent; /* Increased border width */
+  border-top-color: #4db8ff;
+  border-bottom-color: #b3e0ff;
+  border-right-color: #66c2ff;
+  border-left-color: #80ccff;
+  box-shadow: 0 0 20px #2187e7; /* Increased shadow size */
+  animation: spin 30s linear infinite;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 45px; /* Adjusted from 30px */
+  left: 45px; /* Adjusted from 30px */
+  right: 45px; /* Adjusted from 30px */
+  bottom: 45px; /* Adjusted from 30px */
+  border-radius: 50%;
+  border: 5px solid transparent; /* Increased border width */
+  border-color: #1d5ca9;
+  border-style: dotted;
+  animation: spin 18s linear infinite;
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 75px; /* Adjusted from 50px */
+  left: 75px; /* Adjusted from 50px */
+  right: 75px; /* Adjusted from 50px */
+  bottom: 75px; /* Adjusted from 50px */
+  border-radius: 50%;
+  border: 5px solid transparent; /* Increased border width */
+  border-color: #429bc0;
+  border-width: 8px; /* Increased border width */
+  border-style: dotted solid;
+  animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Neon Green Animation */
+@keyframes neon-green {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #22FF22, 0 0 70px #22FF22, 0 0 80px #22FF22, 0 0 100px #22FF22, 0 0 150px #22FF22;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #22FF22, 0 0 35px #22FF22, 0 0 40px #22FF22, 0 0 50px #22FF22, 0 0 75px #22FF22;
+  }
+}
+
+/* Neon Text Class */
+.neon-text {
+  z-index: 999;
+  margin-left: 66px;
+  font-size: 46px;
+  margin-top: -26px;
+  color: #fff;
+  padding: 0px;
+  position: relative;
+  animation: neon-green 1.5s ease-in-out infinite alternate;
+}
+
+/* Tailwind utilities */
+@utilities {
+  .animate-spin-slow {
+    animation: spin 30s linear infinite;
+  }
+
+  .animate-neon-green {
+    animation: neon-green 1.5s ease-in-out infinite alternate;
+  }
+}
+
+/* Global styles */
+body {
+  background: #1a293e;
+  font-family: var(--font-dmsans);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container div:first-child {
+  background-color: #ccffcc;
+  flex: 1;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+.first {
+  flex: 1;
+}
+
+.second {
+  flex: 2;
+}
+
+.third {
+  flex: 1;
+}
+
+#lnav,
+#rnav {
+  display: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #b3e0ff;
+  text-shadow: 0 0 15px #2187e7;
+  border: 1px solid #b3e0ff;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 5px #2187e7;
+}
+
+.navr {
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  background-image: none;
+  background-repeat: none;
+  background-position: 0;
+  display: box;
+  padding: 10px;
+  margin: 25px;
+}
+
+a:hover {
+  cursor: pointer;
 }

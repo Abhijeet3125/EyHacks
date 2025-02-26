@@ -4,16 +4,16 @@ import bcrypt from "bcryptjs";
 import Agent from "../models/agent.model.js";
 
 export const signup = async (req, res) => {
-    const { fullName, email, password } = req.body;
+    const { fullName, agentID, password } = req.body;
     try {
-        if (!fullName || !email || !password) {
+        if (!fullName || !agentID || !password) {
             return res.status(400).json({ message: "All fields are required" });
         }
         if (password.length < 6) {
             return res.status(400).json({ message: "Password must be at least 6 characters" });
         }
 
-        const existingAgent = await Agent.findOne({ email }); // <-- Change variable name here
+        const existingAgent = await Agent.findOne({ agentID }); // <-- Change variable name here
         if (existingAgent) {
             return res.status(400).json({ message: "Agent already exists" });
         }
@@ -21,9 +21,9 @@ export const signup = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hashedpass = await bcrypt.hash(password, salt);
 
-        const newAgent = new Agent({ 
+        const newAgent = new Agent({
             fullName,
-            email,
+            agentID,
             password: hashedpass
         });
 
@@ -34,7 +34,7 @@ export const signup = async (req, res) => {
             res.status(201).json({
                 _id: newAgent._id,
                 fullName: newAgent.fullName,
-                email: newAgent.email,
+                agentID: newAgent.agentID,
                 profilePic: newAgent.profilePic
             });
         } else {
@@ -49,8 +49,8 @@ export const signup = async (req, res) => {
 export const login = async (req, res) => {
     try {
 
-        const { email, password } = req.body;
-        const agent = await Agent.findOne({ email });
+        const { agentID, password } = req.body;
+        const agent = await Agent.findOne({ agentID });
 
         if (!agent) {
             return res.status(400).json({ message: "Invalid credentials" });
@@ -66,7 +66,7 @@ export const login = async (req, res) => {
         res.status(200).json({
             _id: agent._id,
             fullName: agent.fullName,
-            email: agent.email,
+            agentID: agent.agentID,
             profilePic: agent.profilePic
 
         });
@@ -89,10 +89,10 @@ export const logout = (req, res) => {
 
 export const checkAuth = (req, res) => {
     try {
+        console.log("Authenticated Agent:", req.agent); // Log the authenticated agent
         res.status(200).json(req.agent);
-
     } catch (error) {
-        console.log("error in checkAuth controller", error.message);
+        console.log("Error in checkAuth controller:", error.message); // Log the error
         res.status(500).json({ message: "Internal server error" });
     }
 };

@@ -2,13 +2,14 @@ import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { React, useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const AgentSignup = () => {
   const [showPass, setShowPass] = useState(false);
 
   const [formData, setFormData] = useState({
     fullName: "",
-    email: "",
+    agentID: "",
     password: "",
   });
 
@@ -16,7 +17,7 @@ const AgentSignup = () => {
 
   const validateForm = () => {
     if (!formData.fullName.trim()) return toast.error("Full name is required");
-    if (!formData.email.trim()) return toast.error("email is required");
+    if (!formData.agentID.trim()) return toast.error("email is required");
     if (!formData.password) return toast.error("password is required");
     if (formData.password.length < 6)
       return toast.error("password must be atleast 6 characters");
@@ -61,9 +62,9 @@ const AgentSignup = () => {
               type="text"
               placeholder="Agent ID"
               className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] border-none pl-2"
-              value={formData.email}
+              value={formData.agentID}
               onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
+                setFormData({ ...formData, agentID: e.target.value })
               }
             />
           </label>
@@ -86,7 +87,9 @@ const AgentSignup = () => {
         <div className="text-center">
           <p className="text-base-content/60">
             Already have an account?{" "}
-            <span className="text-blue-400">Sign In</span>
+            <Link to={"/login"}>
+              <span className="text-blue-400">Sign In</span>
+            </Link>
           </p>
         </div>
       </div>

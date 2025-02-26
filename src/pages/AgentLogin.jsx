@@ -1,12 +1,13 @@
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { React, useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
+import { Link } from "react-router-dom";
 
 const AgentLogin = () => {
   const [showPass, setShowPass] = useState(false);
 
   const [formData, setFormData] = useState({
-    email: "",
+    agentID: "",
     password: "",
   });
 
@@ -35,9 +36,9 @@ const AgentLogin = () => {
               type="text"
               placeholder="Agent ID"
               className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] pl-2 border-none"
-              value={formData.email}
+              value={formData.agentID}
               onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
+                setFormData({ ...formData, agentID: e.target.value })
               }
             />
           </label>
@@ -53,16 +54,21 @@ const AgentLogin = () => {
               }
             />
           </label>
-          <button type="submit" 
-          className="btn btn-primary w-full mt-4"
-          disabled={isLoggingIn}>
+          <button
+            type="submit"
+            className="btn btn-primary w-full mt-4"
+            disabled={isLoggingIn}
+          >
             Sign In
           </button>
         </form>
         <div className="text-center">
           <p className="text-base-content/60">
             Don't have an account?{" "}
-            <span className="text-blue-400">create Account</span>
+            <Link to={"/signup"}>
+              {" "}
+              <span className="text-blue-400">create Account</span>
+            </Link>
           </p>
         </div>
       </div>
