@@ -1,5 +1,7 @@
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { React, useState } from "react";
+import { useAuthStore } from "../store/useAuthStore";
+import toast from "react-hot-toast";
 
 const AgentSignup = () => {
   const [showPass, setShowPass] = useState(false);
@@ -10,7 +12,23 @@ const AgentSignup = () => {
     password: "",
   });
 
-  const hanldeSubmit = () => {};
+  const { signUp, isSigningup } = useAuthStore();
+
+  const validateForm = () => {
+    if (!formData.fullName.trim()) return toast.error("Full name is required");
+    if (!formData.email.trim()) return toast.error("email is required");
+    if (!formData.password) return toast.error("password is required");
+    if (formData.password.length < 6)
+      return toast.error("password must be atleast 6 characters");
+
+    return true;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const success = validateForm();
+    if (success === true) signUp(formData);
+  };
 
   return (
     <div className="flex flex-col justify-center items-center h-screen font-dmsans">
@@ -22,7 +40,7 @@ const AgentSignup = () => {
           Create Account
         </div>
         <form
-          onSubmit={hanldeSubmit}
+          onSubmit={handleSubmit}
           className="space-y-6 w-[90%] p-[2rem] pt-[0.5rem] m-auto mb-0 mt-0"
         >
           <label className="flex flex-col gap-2 pt-[1rem]">
@@ -31,6 +49,10 @@ const AgentSignup = () => {
               type="text"
               placeholder="Full Name"
               className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] pl-2 border-none"
+              value={formData.fullName}
+              onChange={(e) =>
+                setFormData({ ...formData, fullName: e.target.value })
+              }
             />
           </label>
           <label className="flex flex-col gap-2 ">
@@ -39,6 +61,10 @@ const AgentSignup = () => {
               type="text"
               placeholder="Agent ID"
               className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] border-none pl-2"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
           </label>
           <label className="flex flex-col gap-2">
@@ -47,6 +73,10 @@ const AgentSignup = () => {
               type="text"
               placeholder="••••••"
               className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] border-none pl-2"
+              value={formData.password}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
             />
           </label>
           <button type="submit" className="btn btn-primary w-full mt-4">

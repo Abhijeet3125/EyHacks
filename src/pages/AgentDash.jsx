@@ -1,7 +1,7 @@
-import { FileUser, Headset } from "lucide-react";
-import React from "react";
-import ChatInput from "../components/ChatInput";
-import ChatContainer from "../components/ChatContainer";
+import { FileUser, Headset } from 'lucide-react';
+import React from 'react';
+import ChatInput from '../components/ChatInput';
+import ChatContainer from '../components/ChatContainer';
 
 const AgentDash = () => {
   return (
@@ -12,10 +12,9 @@ const AgentDash = () => {
           <div className="w-[23%] h-[12rem] bg-base-300 rounded-2xl opacity-70 flex flex-col">
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-xl pt-[10%]">
               Active Claims
-              
             </div>
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-xl pt-[10%]">
-              {" "}
+              {' '}
               4
             </div>
           </div>
@@ -24,7 +23,7 @@ const AgentDash = () => {
               Calls made today
             </div>
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-xl pt-[10%]">
-              {" "}
+              {' '}
               4
             </div>
           </div>
@@ -33,7 +32,7 @@ const AgentDash = () => {
               Customer satisfaction
             </div>
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-xl pt-[10%]">
-              {" "}
+              {' '}
               Mostly happy
             </div>
           </div>
@@ -42,7 +41,7 @@ const AgentDash = () => {
               Pending Claims
             </div>
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-xl pt-[10%]">
-              {" "}
+              {' '}
               0
             </div>
           </div>
@@ -77,7 +76,7 @@ const AgentDash = () => {
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               <ChatContainer />
             </div>
-            <ChatInput />
+            {/* <ChatInput /> */}
           </div>
         </div>
       </div>

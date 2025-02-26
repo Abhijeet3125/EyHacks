@@ -1,5 +1,6 @@
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { React, useState } from "react";
+import { useAuthStore } from "../store/useAuthStore";
 
 const AgentLogin = () => {
   const [showPass, setShowPass] = useState(false);
@@ -9,7 +10,11 @@ const AgentLogin = () => {
     password: "",
   });
 
-  const hanldeSubmit = () => {};
+  const { login, isLoggingIn } = useAuthStore();
+  const hanldeSubmit = (e) => {
+    e.preventDefault();
+    login(formData);
+  };
 
   return (
     <div className="flex flex-col justify-center items-center h-screen font-dmsans">
@@ -30,6 +35,10 @@ const AgentLogin = () => {
               type="text"
               placeholder="Agent ID"
               className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] pl-2 border-none"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
             />
           </label>
           <label className="flex flex-col gap-2">
@@ -38,9 +47,15 @@ const AgentLogin = () => {
               type="text"
               placeholder="••••••"
               className="h-13 rounded-md bg-[rgb(0,0,0,0.8)] pl-2 border-none"
+              value={formData.password}
+              onChange={(e) =>
+                setFormData({ ...formData, password: e.target.value })
+              }
             />
           </label>
-          <button type="submit" className="btn btn-primary w-full mt-4">
+          <button type="submit" 
+          className="btn btn-primary w-full mt-4"
+          disabled={isLoggingIn}>
             Sign In
           </button>
         </form>
