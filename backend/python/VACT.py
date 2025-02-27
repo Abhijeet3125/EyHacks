@@ -6,10 +6,19 @@ from deepgram import DeepgramClient, LiveTranscriptionEvents, LiveOptions
 import asyncio
 import numpy as np
 import requests
+import datetime
 
 load_dotenv()
 LLM_SERVER_IP = "127.0.0.1"  # Change this to the actual IP if running on another machine
 LLM_PORT = 5000
+
+LOG_FILE = os.path.join("conversation_log.txt")
+
+def log_conversation(label, text):
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_entry = f"[{timestamp}] {label}: {text}\n"
+    with open(LOG_FILE, "a") as log:
+        log.write(log_entry)
 
 def send_to_llm(conversation_text):
     print(conversation_text)
@@ -29,21 +38,33 @@ def send_to_llm(conversation_text):
 
 
 class AudioStreamer:
-
-    def __init__(self, device, label):
+    def __init__(self, device, label, output_device=None):
         self.sample_rate = 32000
         self.channels = 1
         self.audio_queue = queue.Queue()
         self.stream = None
         self.device = device
         self.label = label
+        self.output_device = output_device  # Output device for playback
+
+        # # Create an output stream only for the customer's audio
+        # # if self.label == "Customer" and self.output_device is not None:
+        # #     self.output_stream = sd.OutputStream(
+        # #         samplerate=self.sample_rate,
+        # #         channels=self.channels,
+        # #         dtype="int16",
+        # #         device=self.output_device
+        # #     )
+        # #     self.output_stream.start()
+        # else:
+        #     self.output_stream = None
 
     def start(self):
         try:
             self.stream = sd.InputStream(
                 samplerate=self.sample_rate,
                 channels=self.channels,
-                dtype='int16',
+                dtype="int16",
                 blocksize=4000,
                 callback=self._audio_callback,
                 device=self.device
@@ -56,10 +77,9 @@ class AudioStreamer:
     def _audio_callback(self, indata, frames, time, status):
         self.audio_queue.put(indata.copy().tobytes())
 
-        #Play the same audio in speakers so you can hear it
-        # `if self.label == "Customer":
-        #     with sd.OutputStream(device=5, samplerate=self.sample_rate, channels=1, dtype="int16") as out_stream:
-        #         out_stream.write(indata)`
+        # If this is the customer, play the audio through the output stream
+        # if self.output_stream:
+        #     self.output_stream.write(indata)
 
     async def generator(self):
         while True:
@@ -83,8 +103,10 @@ async def main():
     )
 
     # Define devices
-    agent_device = 1  # Set to your microphone device
-    customer_device = 2  # Set to Virtual Audio Cable
+    # Define devices (update these IDs accordingly)
+    agent_device = 1  # Your microphone
+    customer_device = 2  # Virtual Audio Cable input
+    #output_speakers = 5  # Your speaker device ID (find using `sd.query_devices()`)
 
     # Initialize audio streams
     agent_stream = AudioStreamer(agent_device, "Agent")
@@ -102,7 +124,12 @@ async def main():
         try:
             transcript = result.channel.alternatives[0].transcript
             if transcript.strip():
-                conversation_buffer.append(f"{label}: {transcript}")
+                log_entry = f"{label}: {transcript}\n"
+                conversation_buffer.append(log_entry)
+
+                # Append to log file
+                with open("conversation_log.txt", "a", encoding="utf-8") as log_file:
+                    log_file.write(log_entry)
 
             # Send to LLM after 10 conversation chunks
             if len(conversation_buffer) >= 5:
@@ -112,7 +139,6 @@ async def main():
 
         except Exception as e:
             print(f"Processing error: {e}")
-
 
     # Event handlers
     async def on_message_agent(_, result):

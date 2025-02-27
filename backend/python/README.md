@@ -1,8 +1,8 @@
 #Virtual Environment for Python files
-to make a python virtual environment inside the backend folder, run:
+to make a python virtual environment inside the backend folder, run the following inside the backend\ directory.:
 python -m venv venv
 .\venv\Scripts\activate (in Windows)
-inside the backend\ directory.
+
 
 #API Keys for Deepgram and Groq
 Then add your Deepgram and groq API Keys in a .env file inside the
