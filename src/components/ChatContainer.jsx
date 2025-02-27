@@ -1,14 +1,44 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useEffect, useRef } from 'react';
 import ChatInput from './ChatInput';
 import Typewriter from './Typewriter';
 
+// Helper function to parse markdown in static messages.
+const parseMarkdown = (input) => {
+  const lines = input.split('\n');
+  return lines.map((line, idx) => {
+    if (line.startsWith('####')) {
+      const content = line.replace(/^####\s*/, '');
+      return (
+        <React.Fragment key={idx}>
+          <h4>
+            <strong>{content}</strong>
+          </h4>
+          <br />
+        </React.Fragment>
+      );
+    } else {
+      const parts = line.split(/(\*\*[^*]+\*\*)/g);
+      const parsedParts = parts.map((part, i) => {
+        if (/^\*\*.*\*\*$/.test(part)) {
+          return <strong key={i}>{part.slice(2, -2)}</strong>;
+        }
+        return <span key={i}>{part}</span>;
+      });
+      return (
+        <React.Fragment key={idx}>
+          {parsedParts}
+          <br />
+        </React.Fragment>
+      );
+    }
+  });
+};
+
 const ChatContainer = () => {
-  // Lazy initialization: load messages from localStorage and disable animation on reload.
   const [messages, setMessages] = useState(() => {
     const storedMessages = localStorage.getItem('chatMessages');
     if (storedMessages) {
       let parsed = JSON.parse(storedMessages);
-      // Disable typewriter animation for reloaded bot messages.
       parsed = parsed.map((msg) =>
         msg.isBot ? { ...msg, animate: false } : msg
       );
@@ -17,27 +47,26 @@ const ChatContainer = () => {
     return [];
   });
   const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef(null);
+  const containerRef = useRef(null);
 
-  // Save messages to localStorage whenever they change.
   useEffect(() => {
     localStorage.setItem('chatMessages', JSON.stringify(messages));
   }, [messages]);
 
-  // Auto-scroll to bottom when new messages are added.
+  // Scroll the container to the bottom.
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight;
+    }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     scrollToBottom();
   }, [messages]);
 
   const handleSendMessage = async (text) => {
     try {
       setIsLoading(true);
-
-      // Add user message immediately.
       setMessages((prev) => [
         ...prev,
         {
@@ -46,24 +75,19 @@ const ChatContainer = () => {
           timestamp: new Date().toISOString(),
         },
       ]);
-
-      // Send to Flask backend.
       const response = await fetch('http://localhost:5000/api/query', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: text }),
       });
-
       const data = await response.json();
-
-      // Add bot response with animate set to true (for new messages).
       setMessages((prev) => [
         ...prev,
         {
           text: data.response || "Sorry, I couldn't process that request.",
           isBot: true,
           timestamp: new Date().toISOString(),
-          animate: true, // New bot messages animate.
+          animate: true,
         },
       ]);
     } catch (error) {
@@ -82,7 +106,6 @@ const ChatContainer = () => {
     }
   };
 
-  // New Chat: clear messages and remove them from localStorage.
   const handleNewChat = () => {
     setMessages([]);
     localStorage.removeItem('chatMessages');
@@ -90,8 +113,7 @@ const ChatContainer = () => {
 
   return (
     <div className="flex flex-col h-166 max-w-3xl mx-auto shadow-lg">
-      {/* Chat Messages */}
-      <div className="flex-1 overflow-y-auto space-y-4">
+      <div ref={containerRef} className="flex-1 overflow-y-auto space-y-4">
         {messages.map((message, index) => (
           <div
             key={index}
@@ -109,12 +131,17 @@ const ChatContainer = () => {
               <div className="whitespace-pre-wrap font-[Roboto] text-lg">
                 {message.isBot ? (
                   message.animate ? (
-                    <Typewriter text={message.text} speed={50} animate={true} />
+                    <Typewriter
+                      text={message.text}
+                      speed={50}
+                      animate={true}
+                      onUpdate={scrollToBottom}
+                    />
                   ) : (
-                    message.text
+                    parseMarkdown(message.text)
                   )
                 ) : (
-                  message.text
+                  parseMarkdown(message.text)
                 )}
               </div>
               <div
@@ -130,10 +157,10 @@ const ChatContainer = () => {
             </div>
           </div>
         ))}
-        <div ref={messagesEndRef} />
+        <div />
         {isLoading && (
           <div className="flex justify-start">
-            <div className="bg-white p-3 rounded-lg border border-gray-200 flex items-center space-x-1">
+            <div className="bg-[#81F2F0] p-3 rounded-lg border border-gray-200 flex items-center space-x-1">
               <div
                 style={{ animationDelay: '0s' }}
                 className="w-2 h-2 bg-gray-400 rounded-full animate-thinking"
@@ -150,14 +177,18 @@ const ChatContainer = () => {
           </div>
         )}
       </div>
-      <div>
-        {/* New Chat Button */}
+      <div className="flex items-center">
         <div className="flex justify-end p-2">
           <button
             onClick={handleNewChat}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+            className="bg-transparent p-2 rounded-full transition-colors duration-200 group"
           >
-            New Chat
+            <img
+              src="/add.png"
+              alt="New Chat"
+              className="w-9 h-9 transition-transform duration-300 ease-in-out transform group-hover:rotate-90 group-hover:scale-125"
+              title="Start a New Chat"
+            />
           </button>
         </div>
         <ChatInput onSend={handleSendMessage} isLoading={isLoading} />
