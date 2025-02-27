@@ -14,7 +14,11 @@ const ClaimSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    claimInfo: {
+    clientName: {
+        type: String,
+        required: true
+    },
+    claimType: {
         type: String,
         required: true
     },

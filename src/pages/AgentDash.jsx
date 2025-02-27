@@ -1,10 +1,10 @@
-import { FileUser, Headset } from 'lucide-react';
-import { React, useEffect } from 'react';
-import ChatInput from '../components/ChatInput';
-import ChatContainer from '../components/ChatContainer';
-import { useStore } from '../store/useStore';
-import { useAuthStore } from '../store/useAuthStore';
-import GlowEffect from '../components/GlowEffect';
+import { FileUser, Headset } from "lucide-react";
+import { React, useEffect } from "react";
+import ChatInput from "../components/ChatInput";
+import ChatContainer from "../components/ChatContainer";
+import { useStore } from "../store/useStore";
+import { useAuthStore } from "../store/useAuthStore";
+import GlowEffect from "../components/GlowEffect";
 
 const AgentDash = () => {
   const { authAgent } = useAuthStore();
@@ -26,7 +26,7 @@ const AgentDash = () => {
               Active Claims
             </div>
             <div className="flex flex-col items-center justify-center font-extrabold font-dmsans text-6xl pt-[10%] text-green-500">
-              {' '}
+              {" "}
               {claims.length}
             </div>
           </div>
@@ -35,7 +35,7 @@ const AgentDash = () => {
               Calls made today
             </div>
             <div className="flex flex-col items-center justify-center font-extrabold font-dmsans text-6xl pt-[10%] text-yellow-500">
-              {' '}
+              {" "}
               4
             </div>
           </div>
@@ -44,7 +44,7 @@ const AgentDash = () => {
               Customer satisfaction
             </div>
             <div className="flex flex-col items-center justify-center font-bold font-dmsans text-2xl pt-[10%] text-green-500">
-              {' '}
+              {" "}
               Mostly happy
             </div>
           </div>
@@ -53,7 +53,7 @@ const AgentDash = () => {
               Pending Claims
             </div>
             <div className="flex flex-col items-center justify-center font-extrabold font-dmsans text-6xl pt-[10%] text-red-500">
-              {' '}
+              {" "}
               3
             </div>
           </div>
@@ -65,7 +65,14 @@ const AgentDash = () => {
             <div className="font-dmsans font-bold ml-5 mt-2 mb-2 text-xl text-white">
               Customer Feedback
             </div>
-            <div className="w-[95%] h-[87%] bg-[rgba(0,0,0,0.4)] ml-3 rounded-xl flex flex-col"></div>
+            <div className="w-[95%] h-[87%] bg-[rgba(0,0,0,0.4)] ml-3 rounded-xl flex flex-col">
+              <div className="w-[97%] h-[4rem] bg-green-200 p-1 m-2 rounded-lg flex flex-col">
+                <h3 className="font-bold text-black ">Shubh Shreshth</h3>
+              </div>
+              <div className="w-[97%] h-[4rem] bg-green-200 p-1 m-2 rounded-lg flex flex-col">
+                <h3 className="font-bold text-black ">Kartev Sumit</h3>
+              </div>
+            </div>
           </div>
 
           {/* claims today*/}
@@ -87,15 +94,15 @@ const AgentDash = () => {
                   </h3>
                   <p className="mb-1">
                     <span className="p-0.5  font-medium mr-1 text-white">
-                      client Summary :
-                    </span>{' '}
-                    {claim.clientSummary}
+                      Client Name :
+                    </span>{" "}
+                    {claim.clientName}
                   </p>
                   <p className="mb-1">
                     <span className="p-0.5  font-medium mr-1 text-white">
-                      claim Info :
+                      Claim Type :
                     </span>
-                    {claim.claimInfo}
+                    {claim.claimType}
                   </p>
                   {/* <a href={`/upload/${claim.claimID}`}>Upload Documents</a> */}
                 </div>

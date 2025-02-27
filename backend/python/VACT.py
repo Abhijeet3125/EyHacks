@@ -65,7 +65,7 @@ class AudioStreamer:
         while True:
             if not self.audio_queue.empty():
                 yield self.audio_queue.get()
-            await asyncio.sleep(0.001)
+            await asyncio.sleep(0.01)
 
 
 async def main():
@@ -105,7 +105,7 @@ async def main():
                 conversation_buffer.append(f"{label}: {transcript}")
 
             # Send to LLM after 10 conversation chunks
-            if len(conversation_buffer) >= 3:
+            if len(conversation_buffer) >= 5:
                 conversation_text = "\n".join(conversation_buffer)
                 send_to_llm(conversation_text)  # Send transcription to LLM API
                 conversation_buffer.clear()  # Clear buffer after sending
