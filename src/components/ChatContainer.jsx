@@ -35,6 +35,8 @@ const parseMarkdown = (input) => {
 };
 
 const ChatContainer = () => {
+  // Lazy initialization: load messages from localStorage and disable animation on reload.
+
   const [messages, setMessages] = useState(() => {
     const storedMessages = localStorage.getItem('chatMessages');
     if (storedMessages) {

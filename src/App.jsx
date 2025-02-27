@@ -26,7 +26,7 @@ const App = () => {
       <Navbar />
       {authAgent && <Sidebar />}
       <div className="w-full h-screen">
-        {/* <Routes>
+        <Routes>
           <Route
             path="/"
             element={authAgent ? <AgentDash /> : <Navigate to="/login" />}
@@ -45,8 +45,7 @@ const App = () => {
             element={authAgent ? <RealTsuggestion /> : <Navigate to="/login" />}
           />
           <Route path="/home" element={<Navigate to="/" />} />
-        </Routes> */}
-        <AgentDash />
+        </Routes>
       </div>
 
       {/* <HomePage/>

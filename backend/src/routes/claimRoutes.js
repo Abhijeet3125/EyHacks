@@ -4,12 +4,37 @@ import Claim from "../models/claim.model.js";
 const router = express.Router();
 
 
+let seed = 1000; // Initial seed value for claimID
+
 // Create a new claim
 router.post('/', async (req, res) => {
-    const { claimID, clientSummary, claimInfo, priority } = req.body;
-    const newClaim = new Claim({ claimID, clientSummary, claimInfo, priority });
+    const { clientName, claimType } = req.body;
+
+    // Generate claimID based on seed
+    const claimID = `CLM-${seed++}`;
+
+    // Assign priority based on claimType
+    let priority;
+    switch (claimType) {
+        case 'medical':
+            priority = 5;
+            break;
+        case 'financial':
+            priority = 4;
+            break;
+        default:
+            priority = 1; // Default priority for other claim types
+    }
+
+    // Fetch clientSummary from another endpoint (assuming it's already available)
+    const clientSummary = "Fetched from another endpoint lorem A car, or an automobile, is a motor vehicle with wheels. Most definitions of cars state that they run primarily on roads, seat one to eight people, have four wheels, and mainly transport people rather than cargo.[1][2] There are around one billion cars in use worldwide."; // Replace with actual fetch logic
+
+    // Create new claim
+    const newClaim = new Claim({ claimID, clientName, claimType, priority, clientSummary });
     await newClaim.save();
-    res.status(201).send(newClaim);
+
+    // Return the claimID to the frontend
+    res.status(201).send({ claimID });
 });
 
 // Assign claims to agents
