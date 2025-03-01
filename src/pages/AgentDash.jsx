@@ -66,11 +66,21 @@ const AgentDash = () => {
               Customer Feedback
             </div>
             <div className="w-[95%] h-[87%] bg-[rgba(0,0,0,0.4)] ml-3 rounded-xl flex flex-col">
-              <div className="w-[97%] h-[4rem] bg-green-200 p-1 m-2 rounded-lg flex flex-col">
-                <h3 className="font-bold text-black ">Shubh Shreshth</h3>
+              <div className="w-[97%] h-[7rem] bg-[#336A72] p-1 m-2 rounded-lg flex flex-col">
+                <h3 className="font-bold text-white ">Shubh Shreshth</h3>
+                <p className="font-medium">
+                  The claim process was smooth and quick. The team kept me
+                  updated at every step and resolved my queries efficiently.
+                  Really appreciate the professionalism!"
+                </p>
               </div>
-              <div className="w-[97%] h-[4rem] bg-green-200 p-1 m-2 rounded-lg flex flex-col">
-                <h3 className="font-bold text-black ">Kartev Sumit</h3>
+              <div className="w-[97%] h-[7rem] bg-[#336A72] p-1 m-2 rounded-lg flex flex-col">
+                <h3 className="font-bold text-white ">Kartev Sumit</h3>
+                <p className="font-medium ">
+                  "I had a great experience with the claims department. They
+                  handled my case with care and ensured timely processing. Kudos
+                  to the support team!"
+                </p>
               </div>
             </div>
           </div>

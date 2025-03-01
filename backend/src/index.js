@@ -8,6 +8,11 @@ import claimRoutes from "./routes/claimRoutes.js"
 import documentRoutes from "./routes/documentRoutes.js"
 import cookieParser from "cookie-parser";
 import cron from "node-cron"
+import { spawn } from 'child_process';
+import path from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 dotenv.config();
 
@@ -28,12 +33,13 @@ app.use('/api/claims', claimRoutes);
 app.use('/api/documents', documentRoutes);
 
 // Schedule the /assign endpoint to run every 5 minutes
-cron.schedule('*/5 * * * *', () => {
+cron.schedule('*/1 * * * *', () => {
     console.log('Running claim assignment job...');
     axios.post(`http://localhost:${PORT}/api/claims/assign`)
         .then(response => console.log('Claims assigned:', response.data))
         .catch(error => console.error('Error assigning claims:', error));
 });
+
 
 
 app.listen(PORT, () => {

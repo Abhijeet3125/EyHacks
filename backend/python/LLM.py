@@ -10,7 +10,7 @@ from transformers import pipeline
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
-
+import subprocess
 model = SentenceTransformer('all-mpnet-base-v2')
 
 index_dir = os.path.join("data", "Faiss_indexes")
@@ -181,7 +181,16 @@ def receive_transcription():
 def refresh_history():
     global conversation_history
     conversation_history = []
+    return jsonify({"status": "success", "message": "Conversation history cleared successfully"}), 200
 
+@app.route('/start_vat', methods=['POST'])
+def start_vat():
+    try:
+        # Start the VAT.py script as a subprocess
+        subprocess.Popen(['python', 'VACT.py'])
+        return jsonify({"status": "success", "message": "VAT server started successfully"}), 200
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == '__main__':
     socketio.run(app, host='0.0.0.0', port=5000, debug=True)

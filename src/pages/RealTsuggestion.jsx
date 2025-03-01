@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
 import { useStore } from "../store/useStore.js";
-import { Captions, FileText, Search } from "lucide-react";
+import { Captions, Search } from "lucide-react";
 
 const socket = io("http://localhost:5000");
 
@@ -14,6 +14,7 @@ const RealTsuggestion = () => {
   const [clientName, setClientName] = useState("");
   const [claimType, setClaimType] = useState("");
   const [claimID, setClaimID] = useState("");
+  const [isRefreshing, setIsRefreshing] = useState(false); // State to track refresh status
 
   const { searchedClaim, searchClaim } = useStore();
 
@@ -51,12 +52,13 @@ const RealTsuggestion = () => {
     }
   }, [displayedSuggestion]);
 
-  // Handle form submission
+  // Handle form submission for claim search
   const handleSubmit2 = async (e) => {
     e.preventDefault();
     searchClaim(formData.claimID);
   };
 
+  // Handle form submission for new claim
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -82,6 +84,62 @@ const RealTsuggestion = () => {
     setIsTranscriptionMode(!isTranscriptionMode);
   };
 
+  // Function to handle refresh memory
+  const handleRefreshMemory = async () => {
+    setIsRefreshing(true);
+    try {
+      const response = await fetch("http://localhost:5000/refresh_history", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({}),
+      });
+
+      if (response.ok) {
+        // Clear the current suggestion display
+        setDisplayedSuggestion("");
+        setSuggestions([]);
+        // You could add a temporary success message here
+        startTypingEffect(
+          "Memory has been successfully refreshed. Ready for new conversation."
+        );
+      } else {
+        console.error("Failed to refresh conversation history");
+        startTypingEffect("Failed to refresh memory. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error refreshing conversation history:", error);
+      startTypingEffect("An error occurred while refreshing memory.");
+    } finally {
+      setIsRefreshing(false);
+    }
+  };
+
+  // Function to handle starting SAKSHAM
+  const handleStartSaksham = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/start_vat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data.message); // Handle success message
+        startTypingEffect("SAKSHAM has been started successfully.");
+      } else {
+        console.error("Failed to start SAKSHAM");
+        startTypingEffect("Failed to start SAKSHAM. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error starting SAKSHAM:", error);
+      startTypingEffect("An error occurred while starting SAKSHAM.");
+    }
+  };
+
   // Typing effect logic
   const startTypingEffect = (text) => {
     setDisplayedSuggestion(""); // Clear the previous suggestion
@@ -96,7 +154,7 @@ const RealTsuggestion = () => {
       if (index > text.length) {
         clearInterval(interval); // Stop the typing effect when complete
       }
-    }, 20); // Adjust typing speed (milliseconds per character)
+    }, 10); // Adjust typing speed (milliseconds per character)
   };
 
   return (
@@ -104,7 +162,7 @@ const RealTsuggestion = () => {
       <div className="flex flex-col h-[90%] w-[60%] ml-[4rem] mt-[6rem]">
         {/* Suggestions Container */}
         <div className="h-[70%] w-[95%] ml-[3rem] bg-[rgba(0,0,0,0.7)] rounded-2xl flex flex-col">
-          <div className="h-[4rem] w-full bg-[rgba(0,0,0,0.8)] flex justify-between items-center pl-[0.5rem] pr-[0.5rem] rounded-t-2xl font-bold  text-white">
+          <div className="h-[4rem] w-full bg-[rgba(0,0,0,0.8)] flex justify-between items-center pl-[0.5rem] pr-[0.5rem] rounded-t-2xl font-bold text-white">
             <div className="pl-[1rem] pb-[0.5rem] text-2xl font-extrabold font-dmsans bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
               RTS powered by SAKSHAM
             </div>
@@ -129,13 +187,15 @@ const RealTsuggestion = () => {
           </div>
         </div>
 
-        {/* buttons container */}
+        {/* Buttons Container */}
         <div className="flex flex-row items-center justify-evenly bg-[rgba(0,0,0,0.7)] h-[17%] mt-[1rem] rounded-2xl w-[95%] ml-[3rem]">
           <div className="px-3 py-2 bg-green-700 text-white rounded-xl font-semibold hover:bg-green-500">
-            <button>Start SAKSHAM</button>
+            <button onClick={handleStartSaksham}>Start SAKSHAM</button>
           </div>
           <div className="px-3 py-2 bg-green-700 text-white rounded-xl font-semibold hover:bg-green-500">
-            <button>Refresh Memory</button>
+            <button onClick={handleRefreshMemory} disabled={isRefreshing}>
+              {isRefreshing ? "Refreshing..." : "Refresh Memory"}
+            </button>
           </div>
           <div className="relative">
             {/* New Claim Button */}
@@ -196,7 +256,10 @@ const RealTsuggestion = () => {
                 {claimID && (
                   <div className="mt-4 p-2 bg-[rgba(0,0,0,0.7)] rounded-md">
                     <p className="text-semibold text-white">
-                      <span className="font-semibold text-green-400">Claim ID:</span> {claimID}
+                      <span className="font-semibold text-green-400">
+                        Claim ID:
+                      </span>{" "}
+                      {claimID}
                     </p>
                   </div>
                 )}
