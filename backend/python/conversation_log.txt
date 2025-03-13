@@ -1,0 +1,892 @@
+Agent: So can you tell me that what documents will I need to file a medical claim?
+Agent: In case of an accident?
+Agent: I need little help
+Agent: Also, can you tell me that, if I
+Agent: need to know that how much time will it take to process the claim?
+Agent: So can you tell me also?
+Agent: And
+Agent: how should I approach the customer?
+Agent: In case he wants to
+Agent: file for a financial claim.
+Customer: Cancel that.
+Agent: Hello?
+Customer: Hello?
+Agent: Hello? Hello?
+Customer: Hello?
+Customer: Hello?
+Agent: Hello?
+Customer: Hello?
+Agent: Hello?
+Agent: Hey. I had a medical claim. Can I know
+Agent: what documents I require?
+Customer: Hey. I had a medical claim
+Customer: Can I know what documents I require?
+Agent: Information state complete
+Customer: Information state complete
+Agent: Refresh memory customer is having trouble connecting documents required of medical claim.
+Customer: said the customer is having trouble connecting documents required of medical claim.
+Agent: Not return a valid
+Customer: Not return a valid
+Agent: So
+Agent: We did
+Customer: Yeah.
+Agent: What is this?
+Customer: What is my son, ma'am?
+Agent: Hi.
+Customer: Hi.
+Customer: Yes.
+Agent: Hello?
+Customer: Hello?
+Agent: Hello?
+Customer: Hello?
+Agent: Hey. I need some information about
+Customer: Hey. I need some information about
+Agent: Hello, Yes.
+Customer: That's in the other one. Yeah.
+Agent: Hey. I need some information about medical him.
+Customer: Hey. I need some information about medical name.
+Agent: Hey. I want
+Customer: Hey. I want
+Agent: I want some information about
+Customer: want some information about
+Agent: finance claim.
+Customer: finance claim.
+Agent: Hey. I need some information about finance team.
+Customer: Hey. I need some information about finance claim.
+Agent: Hello?
+Customer: Hello?
+Agent: Clear
+Agent: restart.
+Customer: Restart.
+Customer: Yeah.
+Agent: Right.
+Customer: Hi.
+Agent: Conversation history.
+Customer: Conversation history.
+Agent: And
+Agent: It's
+Agent: Hello. I need some information about the medical claim.
+Customer: Hello. I need some information about the medical
+Customer: claim.
+Agent: Can you please help me regarding this
+Customer: Can you please help me regarding this?
+Agent: Okey
+Customer: Okay.
+Customer: I'll see what I can do.
+Agent: We can go
+Customer: Yeah. It will decline. We can both
+Customer: Who starts the
+Customer: Yeah. I would love ECP. Right?
+Customer: Something.
+Agent: I mean, it's
+Customer: I didn't call.
+Agent: Index quality index dot DMS. That's good.
+Customer: Index
+Customer: Yeah.
+Agent: My Internet outage, but not as canceled.
+Customer: Dude, my Internet router's gonna have to cancel
+Agent: Bro, that is fucking busy.
+Customer: Bro, that is fucking busy.
+Agent: K.
+Customer: Generation queries.
+Customer: Regarding the context of the confirmation,
+Customer: Query generation plus
+Agent: Hello.
+Customer: Hello?
+Agent: Contact saving.
+Customer: Contact saving.
+Customer: Indexed for JSONL?
+Agent: Index dot g s to the back end back end.
+Customer: Index dot g s to the back end back end run.
+Agent: Yeah.
+Agent: Twenty
+Agent: Hello.
+Customer: Gwen.
+Agent: Hello. Hey.
+Customer: Hello.
+Customer: Okay.
+Agent: Yes, baby. Yes.
+Customer: Yes, baby. Yes.
+Customer: And do I know you
+Agent: Please give me some information about the medical claim.
+Agent: Please give me some information about the medical claim.
+Customer: Where he's giving me some information about the medical claim?
+Customer: Where he's giving me some information about the medical claim?
+Agent: Can you need can you help me?
+Agent: Can you need can you help me?
+Customer: Can you need can you help me?
+Customer: Can you need can you help me?
+Agent: When do you have a virus, ma'am?
+Agent: When you have a virus, ma'am?
+Customer: When you
+Customer: When you
+Agent: Company calling mode.
+Customer: So
+Agent: Manual
+Customer: manual.
+Customer: manual.
+Agent: We use effect
+Agent: use effect
+Customer: It will use effect.
+Customer: It will use effect.
+Agent: suggestions here. Okay.
+Agent: Set suggestions here. Great.
+Customer: Suggestions here.
+Customer: Suggestions here.
+Agent: New suggestion dot length is greater than two.
+Agent: New suggestions dot length is greater than two.
+Customer: New suggestions dot length is greater than two.
+Agent: Then formatted response, newization,
+Customer: New suggestions dot length is greater than two.
+Customer: Then formatted response, newization
+Customer: Then formatted response, newization,
+Agent: Then formatted response, newization,
+Agent: Those kids will start typing if I can permitted response based it there.
+Agent: Those kids will start typing if I can permitted response based it there.
+Customer: Those cats will start typing if I can permitted response based it there.
+Customer: Those cats will start typing if I can formulate response based it there.
+Agent: Greater than one.
+Agent: Just for one greater than one.
+Customer: Just for one greater than one.
+Agent: I guess.
+Agent: I get.
+Customer: I guess.
+Customer: I guess.
+Customer: It's also yeah. I guess for the other.
+Customer: It's also yeah. I guess to the other
+Customer: Let me go refresh for that.
+Customer: Let me go refresh for that.
+Customer: I didn't
+Agent: So
+Agent: So
+Customer: So
+Customer: So
+Agent: So
+Agent: I need
+Agent: I need
+Customer: So
+Customer: I need
+Customer: I need
+Agent: I need
+Customer: I need
+Agent: had an experience, so I need help regarding how to find for the
+Agent: had an experience, so I need help regarding how to file for them.
+Customer: had an experience, so I need help regarding how to find portal.
+Agent: had an accident, so I need help regarding how to file for the
+Customer: had an experience, so I need help regarding how to find for the
+Customer: I had an experience, so I need help regarding how to find order.
+Agent: Hello? So
+Agent: Hello? So
+Agent: Hello? So
+Customer: Hello? So
+Customer: Hello? So
+Agent: had an accident.
+Customer: Hello? So
+Agent: I had an accident, so I want to file for a medical claim.
+Customer: I had an accident, so I want to file for a medical claim.
+Customer: I had an accident, so I want to file for a medical claim.
+Customer: I had an accident, so I want to file for a medical claim.
+Agent: So what
+Agent: So what
+Agent: The customer is asking about the food.
+Agent: The customer is asking about the food.
+Agent: Either the customer is asking about the food
+Customer: The customer is asking about the food.
+Customer: The customer is asking about the quote.
+Customer: The customer is asking about the food.
+Agent: May.
+Agent: May.
+Agent: I
+Agent: I
+Customer: Hi.
+Customer: Hi.
+Agent: I
+Customer: Hi.
+Agent: Contact Sammy. July the year?
+Agent: Contact's name. July, May, May.
+Agent: Contact.
+Customer: Contact.Customer: Contact.
+Agent: Okay.
+Agent: Okay.
+Customer: Okay.
+Customer: Okay.
+Agent: Think about it. I think it probably makes
+Customer: Think about it. I think it probably may cancel. If
+Customer: Think about it. I think it probably
+Customer: Think about it. I think it probably may
+Agent: Console change
+Customer: My data of consoles
+Customer: My data of consoles
+Agent: Hello. I need some information regarding
+Agent: Hello. I need some information regarding
+Agent: Hello. I need some information regarding
+Customer: Hello. I need some information regarding
+Customer: And
+Customer: Hello. I need some information regarding
+Customer: an
+Agent: an for a medical claim.
+Customer: an
+Agent: an for a medical plan.
+Agent: an for a medical plan.
+Agent: The provided information does not
+Customer: The
+Customer: The
+Agent: Query about console data being affected by a change and whether it will be canceled.
+Agent: Query about console data being affected by a change and whether it will be canceled.
+Agent: address the query about console data being affected by a change in whether it will be canceled.
+Customer: by a change and whether it will be canceled.
+Customer: by a change in whether it will be canceled.
+Customer: by a change and whether it will be canceled.
+Agent: Mario.
+Agent: Yes.
+Agent: Yes.
+Customer: Yes.
+Customer: Yes.
+Customer: Yes.
+Agent: Yes.
+Agent: Same script JavaScript
+Agent: Same script JavaScript
+Agent: Same script JavaScript
+Customer: Same script. My front end JavaScript
+Customer: Same script. My front end JavaScript
+Customer: Same script. My front end JavaScript
+Agent: Please
+Agent: do you
+Customer: Eight hundred
+Customer: Eight hundred
+Customer: Eight hundred
+Agent: Hello. So
+Agent: Hello. So
+Customer: Hello. So
+Customer: Hello. So
+Customer: Hello. So
+Agent: Hello? So I need info
+Agent: I need to think
+Agent: ID is sent
+Customer: I need info.
+Customer: I need info.
+Customer: I need info.
+Agent: Hello?
+Agent: Hello?
+Agent: Alright.
+Agent: Alright.
+Customer: Alright.
+Agent: Formatted response, but
+Agent: Formatted response, but
+Agent: Formatted response, but
+Customer: Formatted response by
+Customer: Formatted response by
+Customer: Formatted response by
+Agent: we would like for formatted response, man.
+Agent: we would like for formatted response, man.
+Customer: we would like for a minute response, man.
+Customer: we would like for a minute response, man.
+Customer: we would like for a minute response, man.
+Agent: Real time solutions, madam.
+Agent: Real time solutions, madam.
+Agent: Real time solutions, madam.
+Customer: Real time solutions, madam.
+Customer: Real time solutions, madam.
+Customer: Real time solutions, madam.
+Agent: It's me.
+Agent: It's me.
+Agent: It's me.
+Customer: It's me.
+Customer: It's me.
+Customer: It's me.
+Customer: Let's go and look on the radio station's length.
+Customer: Let's go and look on the radio station's length.
+Agent: If
+Agent: If
+Agent: If
+Customer: If
+Customer: If
+Customer: If
+Agent: the new suggestions, another would change.
+Agent: the new suggestions do another would change, would I have barber?
+Agent: the new suggestions do another would change, whatever. But
+Customer: the new suggestions change
+Customer: the new suggestions change
+Customer: the new suggestions change
+Agent: You
+Agent: You
+Customer: open?
+Agent: Capture.
+Agent: Python
+Customer: Python
+Agent: Hello?
+Agent: I'm having trouble with the.
+Agent: I'm having trouble with the.
+Agent: Copy.
+Customer: Okay.
+Customer: Okay.
+Customer: Okay.
+Agent: Failed to send data
+Agent: Failed to send data
+Agent: Failed to send data
+Customer: Need to send data
+Customer: to LMM.
+Customer: to LMM.
+Customer: Need to send data
+Customer: to LMM.
+Customer: That's my name.
+Agent: Would you would they give the reassigned suggestion?
+Agent: Would would they get a reassigned suggestion
+Customer: Will they will they give the real time suggestion?
+Customer: Would say we'll give the real time suggestion
+Customer: We have already made
+Customer: We have already made
+Agent: because we cannot
+Agent: Because we cannot
+Agent: demonstration for that because we cannot
+Customer: a demonstration for that because we cannot
+Customer: show that
+Customer: a demonstration for that because we cannot
+Customer: show that
+Agent: show that during a live meeting,
+Agent: show that during a live meeting,
+Customer: during our live meeting,
+Customer: show that during our live meeting,
+Agent: show that during our live meeting,
+Customer: during our live meeting,
+Customer: Sorry?
+Customer: Sorry?
+Customer: Sorry?
+Agent: Hello?
+Agent: Hello?
+Customer: Hello?
+Customer: Hello?
+Customer: Hello?
+Customer: Hello?
+Agent: So can you tell me what documents will I need to file for a medical claim?
+Agent: So can you tell me about documents will I need to file for a medical claim?
+Agent: So can you tell me about documents will I need to file for a medical claim?
+Agent: So can you tell me what documents will I need to file for a medical claim?
+Agent: In case of an accident?
+Agent: In case of an accident?
+Agent: In case of an accident?
+Customer: So can you tell me what documents will I need to file for a medical claim?
+Customer: So can you tell me what documents will I need to file for a medical claim?
+Customer: So can you tell me about documents will I need to file for a medical claim?
+Agent: In case of an accident?
+Customer: So can you tell me what documents will I need to file for a medical claim?
+Agent: I need help.
+Customer: In case of an accident?
+Customer: In case of an accident?
+Agent: I need help.
+Customer: In case of an accident?
+Agent: I need help.
+Agent: I need help.
+Customer: In case of an accident?
+Customer: I need help.
+Customer: I need help.
+Customer: I need help.
+Customer: I need help.
+Agent: It's pixel image. Okay.
+Agent: Start typing with the app.
+Customer: Yeah. That's
+Customer: Yeah. That's
+Customer: Yes.
+
+Agent: Display
+Agent: Display
+Customer: When you do that,
+Customer: When you do that,
+Customer: When you do that,
+Agent: Display
+Agent: He gets
+Agent: He
+Agent: schedule.
+Agent: I scheduled
+Customer: When you do that,
+Agent: Display
+Agent: He gets
+Agent: I'll schedule
+Customer: display blank, sir, the previous
+Agent: He gets
+Agent: I scheduled
+Customer: display blank, sir, the previous
+Customer: display blank, sir, the previous
+Customer: display blank, sir, the previous
+Customer: I'll schedule.
+Agent: Index zero. I don't know. Index. Yeah. I guess. Interval for second table.
+Agent: Index zero. I don't know. Index. Yeah. I guess. Interval for second table.
+Agent: Index zero. I don't know index. Yeah. I guess interval for second table.
+Agent: index zero. I don't know index. Yeah. I guess interval two second interval.
+Agent: Set display duration previous.
+Agent: Set this participation previous.
+Agent: Set the spread duration previous.
+Agent: Set the spread duration previous.
+Agent: Something something text
+Agent: Something something text
+Agent: To something something text
+Agent: Something something text
+Customer: index zero and the next. Yeah. I guess, to the rate, the interval goes second to the room.
+Customer: index zero. I don't know index. Yeah. I guess, to see the interval goes at interval.
+Customer: index zero and the next. Yeah. I guess, to the rate, the interval goes second to one.
+Customer: Index zero and no index. Yeah. I guess interval goes at interval.
+Customer: Set display duration previous.
+Customer: Set display station previous.
+Customer: Set display duration previous.
+Customer: Set display duration previous.
+Customer: Or something something text
+Customer: Or something something text
+Customer: Or something something text
+Customer: Or something something text
+Customer: There'll be a
+Agent: Okay. Yes. I just sent
+Agent: Okay. Yes, sir. Disparation, we give a state.
+Customer: There'll be a
+Agent: Okay. Yes, sir. Disparation, we give a state ID. That's the one we'll go.
+Customer: There'll be a
+Agent: Okay. Yes, sir. Disparation, we give a state ID. That's the one we'll go.
+Customer: Okay.
+Customer: Okay.
+Customer: Okay.
+Customer: Okay.
+Agent: We'll come to you again. We'll take care of the
+Agent: We'll continue. We'll take care of the
+Customer: We'll come together. We'll take care of the
+Agent: You don't look at the daily.
+Agent: because you don't look at the daily.
+Agent: You don't look at the daily.
+Customer: Because you don't have the book downloaded.
+Agent: Download download.
+Customer: Because you don't have the book downloaded.
+Customer: Because you don't have the book downloaded.
+Agent: Previous new display text
+Agent: Previous new display text
+Agent: Previous to new display text
+Customer: Previous to new display text
+Customer: Previous new display text
+Agent: Adi, thousand milliseconds
+Agent: Adi, it's thousand milliseconds
+Agent: updating you.
+Customer: Update in yoga.
+Agent: Diego?
+Customer: I see. Bagels?
+Customer: Hi, CJ.
+Agent: That's milliseconds.
+Agent: That's milliseconds.
+Customer: I mean, space for the
+Customer: I mean, space for the
+Customer: space for the
+Agent: But
+Agent: But
+Customer: But
+Agent: could I guess you may fix one?
+Agent: could I guess your name?
+Customer: could I guess your main fixer?
+Customer: But
+Agent: Start section
+Agent: Start section
+Customer: could I guess your main fixer?
+Customer: Start section
+Agent: Hey. Hello. Hello.
+Agent: Hey. Hello. Hello.
+Agent: I need information about financial claim.
+Agent: I need information about financial claim.
+Customer: I need information about financial claim.
+Customer: I need information about financial claim.
+Agent: Speaker.
+Agent: So speaker ID.
+Customer: It's
+Agent: You've
+Agent: You've
+Customer: You you
+Customer: Then you you
+Agent: k.
+Agent: One point five lakhs peak throughput.
+Agent: One point five lakhs peak throughput.
+Customer: One point five lakhs speaker.
+Customer: Seriously.
+Customer: One point five lakhs speaker.
+Customer: Seriously.
+Agent: Esopp's. Esopp's scale plan.
+Customer: EZOP's skeleton.
+Customer: EZOP's skeleton.
+Customer: One point five lakhs.
+Customer: One point five lakhs per
+Agent: Here you go.
+Agent: Here you go.
+Customer: Here we go.
+Customer: Here we go.
+Customer: Yeah.
+Agent: Correct. Ten percent
+Agent: At ten percent.
+Customer: One at ten percent stake at company.
+Customer: One at ten percent stake at company.
+Agent: You have some
+Agent: Well, it's obvious in the same way.
+Agent: Well, it's obvious in assembly.
+Customer: Well, it's obvious in the Sunday.
+Customer: Well, it's obvious in assembly.
+Agent: Related to Ease of skeleton and Ease of scale claim. They have ten percent
+Agent: Related to EZOP's skeleton and EZOP scale plane. They
+Customer: Related to EZOP's skeleton and EZOP scale claim. They have ten percent
+Agent: stake in the company here is what you need to know.
+Agent: have ten percent stake in the company. Here is what you need to know.
+Customer: stake in the company. It is what we need to know.
+Customer: Related to EZOP's skeleton and EZOP scale claim. They have ten percent
+Agent: Ask the customer and policy number and payment details.
+Customer: Ask the customer for the policy number and payment details.
+Agent: Now we are together.
+Customer: I will have to go.
+Agent: Ask the customer and policy number and payment details.
+Customer: stake in the company. It is what we need to know.
+Agent: Now we are together.
+Agent: I said my ear
+Customer: Ask the customer for the policy number and payment details.
+Customer: I said my year
+Agent: Customer
+Customer: customer
+Agent: customer
+Customer: I will have to go.
+Customer: I said my year
+Customer: customer
+Customer: Okay.
+Customer: Okay.
+Agent: Tomorrow input
+Customer: Tomorrow input
+Customer: Tomorrow input
+Agent: Okay. The map volume and so here, we have the login page and,
+Agent: Okay. The map will come here. We have the login page and,
+Customer: Okay. Here we have the login page and
+Customer: Okay. The map volume and go here. We have the login page and
+Agent: agent will get the real time suggestions. Script
+Agent: agent will get the real time suggestions. Script
+Customer: agent will get the real time suggestions and script
+Customer: agent will get the real time suggestions and script thing is like,
+Customer: What's your
+Agent: It's gonna be
+Customer: It's not being It's for recorded.
+Customer: It's not being It's for recorded.
+Agent: back end
+Agent: back end change
+Customer: Sweet.
+Customer: But
+Customer: But
+Customer: Yes,
+Customer: Yes,
+Customer: Man, two
+Agent: Hello?
+Customer: Hello?
+Agent: How can I help you?
+Customer: How can I help you?
+Customer: Yeah. I had an
+Customer: then. So I want
+Agent: Hey. I had an accident, so I want
+Customer: to file for a insurance
+Agent: to file for a insurance claim.
+Agent: Okay.
+Agent: Give me a sec.
+Customer: Okay.
+Customer: Give me a sec.
+Agent: So I hey. Is that really good?
+Customer: So I hey. Is that really good for you?
+Agent: I've been looking you guys for a while.
+Customer: Hello?
+Customer: Been looking at you guys, and I have.
+Agent: You should. Be great.
+Customer: You should write me copy again. Pay.
+Customer: Let me
+Customer: Yeah. Look,
+Agent: One credit then?
+Customer: One credit then?
+Agent: Hello? How can I help you?
+Customer: Hello? How can I help you?
+Customer: Hello?
+Customer: Can I help you?
+Agent: Hello? How can I help you?
+Agent: Hey. I had an accident, so I want to file for the insurance claim.
+Customer: Hey. I had an accident, so I want to file for the insurance claim.
+Agent: Okay.
+Customer: Hey. I had an accident, so I want to fight for the insurance claim.
+Customer: Okay.
+Customer: Okay.
+Customer: Give me a sec.
+Agent: Give me a sec.
+Customer: Give me a sec.
+Agent: Hey. I had an accident, so I want to file for the insurance claim.
+Agent: Okay.
+Agent: Give me a sec.
+Agent: Best Navy card in law.
+Customer: Right?
+Customer: Customer
+Customer: Customer
+Customer: I just wanna tell you, but then he was
+Agent: Hello? How can I help you?
+Customer: Hello? How can I help you?
+Customer: Hey. I had an
+Customer: Hello? How can I help you?
+Customer: Hey. I had an accident, so I want to file for the insurance claim.
+Customer: Can you tell me what documents will I need to file for my medical claim?
+Customer: Okay. Give me a sec.
+Customer: So
+Customer: here are the steps that you should take.
+Customer: Submit the claim form along with supporting documents, notify the insurer about the loss,
+Customer: and gather the necessary documents.
+Customer: Okay. So what documents will I need?
+Customer: Okay.
+Customer: I will notify you.
+Customer: To file the medical claim after an exchange, you will likely need the following documents.
+Customer: accident, so I want to file for the insurance claim.
+Customer: The copy of the FIR, the doctor's report,
+Customer: Medical bills.
+Customer: Can you tell me what documents will I need to file for my medical claim?
+Customer: And your policy document and then ID proof.
+Customer: Okay. Give me a sec.
+Customer: So
+Customer: here are the steps that you should take.
+Customer: Submit the claim form along with supporting documents, notify the insurer about the loss,
+Customer: and gather the necessary documents.
+Customer: Okay. So what documents will I need?
+Customer: Okay.
+Customer: I will notify you.
+Customer: To file the medical claim after an exchange, you will likely need the following documents.
+Customer: The copy of the FIR, the doctor's report,
+Customer: Okay. Also, tell me how much
+Customer: Medical bills.
+Customer: And your policy document and an ID proof.
+Customer: Okay.
+Customer: Also, tell me how much
+Customer: time will it take to process my medical claim?
+Customer: Okay. I will notify you. Just give me a sec.
+Customer: Can you help regarding
+Customer: Okay. Also, tell me how much time will I
+Customer: Okay. Tell me, how much time will it take to process my medical claim?
+Customer: Okay. Also, tell me how much time will I
+Customer: it take to pursue a medical claim?
+Customer: The processing time for medical insurance claim is typically five to seven
+Customer: business days.
+Customer: It also depend depends on various cases.
+Customer: The insurance company
+Customer: should be notified for the hospitalization
+Customer: before twenty four hours.
+Customer: And
+Customer: You should
+Customer: Submit the required documents.
+Customer: To us.
+Customer: Within twenty four hours.
+Customer: Okay. Thank you for helping me out.
+Customer: Okay. Thank you so much.
+Customer: Okay.
+Customer: I'll be admin
+Customer: Recording the
+Customer: Anywho, whoever
+Customer: Repeat, Marlene.
+Customer: Thank you.
+Customer: May have to look at it then.
+Customer: A hot stone.
+Customer: But
+Customer: Hello?
+Agent: Hello?
+Customer: How can I help you?
+Agent: How can I help you?
+Agent: Yeah. I had an accident, so I want to file for a insurance claim.
+Customer: Yeah. I had an accident, so I want to file for a insurance
+Customer: needs
+Customer: needs
+Agent: Needs as a good supportive
+Customer: as a good supportive
+Customer: Yeah?
+Agent: Hello?
+Customer: Hello?
+Agent: Hello?
+Customer: Hello?
+Agent: How can I help you?
+Agent: Hello?
+Customer: How can I help you?
+Agent: How can I help you?
+Agent: Hey. I had an accident.
+Customer: Hello?
+Agent: Hey. I had an accident.
+Agent: I want to file for insurance claim.
+Agent: I want to file for insurance claim.
+Customer: Hey. I had an
+Customer: I want to file for insurance claim.
+Agent: Can you tell me what documents will I need to file for my medical claim?
+Customer: Can you tell me what documents will I need to file for my medical claim?
+Customer: How can I help you?
+Agent: Okay. Give me a sec.
+Customer: Okay. Give me a sec.
+Agent: Can you
+Customer: Hey. I had an
+Agent: Hello?
+Customer: Hello?
+Agent: How can I help you?
+Customer: How can I help you?
+Agent: You replace memory
+Customer: You replace the memory
+Customer: Okay.
+Agent: Hello?
+Agent: Hello?
+Agent: Can I help you?
+Agent: Can I help you?
+Customer: Hello?
+Customer: Hello?
+Customer: Can I help you?
+Customer: Can I help you?
+Customer: Hey. I have an tax
+Customer: Hey. I have an
+Customer: then
+Agent: Hey. I had an accident, so I want to file for the insurance claim.
+Customer: so I want to file for the insurance claim.
+Customer: so I want to file for the insurance
+Customer: k.
+Agent: Hey. I had an accident, so I want to file for the insurance claim.
+Agent: Can you tell me what documents will I need to fill for my medical claim?
+Agent: Can you tell me what documents will I need to fill for my medical claim?
+Customer: Can you tell me what documents will I need to fill for my medical claim?
+Customer: Can you tell me what documents will I need to fill for my medical claim?
+Customer: Okay. Just give me a sec.
+Agent: Okay. Just give me a sec.
+Agent: Okay. Just give me a sec.
+Customer: Okay. Just give me a sec.
+Agent: So the documents that you will need is a copy of the FIR, the doctor's report, medical bills,
+Agent: So the documents that you will need is a copy of the FIR, the doctor's report, medical bills,
+Customer: So the documents that you will need is a copy of the FIR, the doctor's report, medical bills,
+Customer: So the documents that you will need is a copy of the FIR, the doctor's report, medical bills,
+Agent: the policy document.
+Agent: and the policy document.
+Customer: and the policy document.
+Customer: And your ID proof.
+Agent: And your ID proof.
+Customer: and the policy document.
+Agent: And your ID proof.
+Customer: And your ID proof.
+Agent: Okay.
+Agent: Okay.
+Customer: Okay.
+Customer: Okay.
+Customer: Also, tell me how much
+Customer: Also, tell me how much
+Agent: Also, tell me how much time will it take to process my claim?
+Agent: Also, tell me, how much time will it take to process my claim?
+Customer: time will it take to process my claim?
+Customer: time will it take to process my claim?
+Agent: Okay. Just give me a sec.
+Agent: Okay. Just give me a sec.
+Customer: Okay. Just give me a sec.
+Customer: Okay. Just give me a sec.
+Agent: I will notify you about the time.
+Agent: I will notify you about the time.
+Customer: I will notify you about the time.
+Customer: I will notify you about the time.
+Agent: The processing time for medical claim is usually five to seven days.
+Agent: The processing time for medical claim is usually five to seven days.
+Customer: The processing time for medical claim is usually five to seven days.
+Customer: The processing time for medical claim is usually five to seven days.
+Agent: And
+Agent: And
+Customer: And
+Customer: And
+Customer: here are the steps that you should follow.
+Agent: here are the steps that you should follow.
+Customer: here are the steps that you should follow.
+Agent: here are the steps that you should follow.
+Agent: Submit the necessary documents. Notify the insurer.
+Agent: Submit the necessary documents. Notify the insurer.
+Customer: Submit the necessary documents. Notify the insurer.
+Customer: Submit the necessary documents. Notify the insurer.
+Agent: And provide an FIR copy.
+Customer: And provide an FIR copy.
+Agent: And
+Agent: provide an FIR copy.
+Customer: And provide an FIR copy.
+Agent: Okay. Thank you for helping me out.
+Agent: Okay. Thank you for helping me out.
+Customer: Okay. Thank you for helping me out.
+Customer: Okay. Thank you for helping me out.
+Agent: Okay. Thanks a lot.
+Customer: Okay. Thanks a lot.
+Customer: Mhmm.
+Customer: You got it.
+Agent: Okay. Thanks a lot.
+Customer: Okay. Thanks a lot.
+Customer: Yes.
+Customer: React
+Customer: Whatever you
+Customer: Whatever you
+Customer: Barbara Domkutto?
+Customer: Barbara, Don't put
+Agent: I think it's not cellular.
+Customer: My old school WhatsApp.
+Customer: My old school WhatsApp.
+Agent: May I ask who WhatsApp
+Agent: My old school WhatsApp.
+Agent: Give me a sec.
+Agent: Give me a sec.
+Customer: Give me a sec.
+Customer: Give me a sec.
+Customer: What documents will I
+Agent: What documents will I need to file for my medical claim?
+Customer: What documents will I need to file for my medical claim?
+Customer: need to file for my medical claim?
+Agent: What documents will I need to file for my medical claim?
+Customer: Two
+Agent: This is okay. Submit
+Agent: This would be submit
+Customer: submit the claim form along with supporting documents, notify the
+Customer: Submit the claim form along with supporting documents. Notify the insurer about the loss
+Customer: insurer about the loss. And you better wait.
+Customer: you better wait.
+Agent: Discount card.
+Customer: Discount card.
+Agent: Discount card.
+Customer: Discount card.
+Agent: Okay.
+Agent: Okay.
+Customer: Okay.
+Customer: Okay.
+Agent: How are you?
+Agent: How are you?
+Customer: How are you?
+Customer: How are you?
+Agent: Completing the link.
+Customer: Link.
+Agent: Hello?
+Customer: Hello?
+Agent: Hey. I wanted to know how much time will it take to process my medical claim?
+Customer: Hey. I wanted to know how much time will it take to process my medical claim?
+Customer: Okay.
+Agent: Okay. I will tell you what I'm saying.
+Customer: I will tell you in a sec.
+Agent: Can you tell me your name?
+Customer: Can you tell me your name?
+Agent: So my name is Abizit.
+Customer: So my name is Abhijit.
+Agent: Post
+Customer: Post.
+Agent: Nine eight.
+Customer: Nine eight.
+Agent: I pressed waiting for changes.
+Customer: I pressed waiting for changes.
+Agent: Okay.
+Customer: Okay.
+Agent: Duplicate
+Customer: Duplicate
+Agent: database
+Customer: database
+Agent: So
+Agent: please note your claim ID.
+Customer: please note your claim ID.
+Agent: That your claim ID is CLM.
+Customer: That your claim ID is CLM.
+Agent: Dash
+Customer: Dash
+Agent: one thousand.
+Customer: one thousand.
+Agent: Okay. I have noted it. Thank you.
+Customer: Okay. I have noted it. Thank you.
+Agent: Okay. Thanks a lot. Remember this claim ID. Okay.
+Customer: Okay. Thanks a lot. Remember this claim ID, please. Okay.
+Agent: Okay. I have noted it.
+Customer: Okay. I have noted it.
+Agent: Ten minutes out again?
+Customer: Minus
+Agent: Yes.
+Agent: That's
+Agent: So
+Customer: Yes.
+Customer: So

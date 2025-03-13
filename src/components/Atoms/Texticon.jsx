@@ -1,14 +1,14 @@
-const Texticon = () => {
+const Texticon = ({data}) => {
   return (
-    <div className="flex w-full gap-2">
-              <div className="flex bg-gray-500 mt-[0.8rem] h-[3rem] w-[92%] ml-[1rem] text-3xl items-center rounded-xl">
-            LIVE SUGGESTIONS
-              </div>
-              <div className="h-[3rem] rounded-xl bg-gray-500 mt-[0.8rem]">
-                meow
-              </div>
+    <div className="flex w-full  gap-2">
+      <div className="flex bg-white mt-[0.8rem] h-[3rem] w-[90%] ml-[1rem] text-2xl font-bold text-gray-600 items-center rounded-xl font-mdsans">
+        {data}
+      </div>
+      <div className="flex justify-center items-center">
+        
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Texticon
+export default Texticon;
